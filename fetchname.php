@@ -1,0 +1,1 @@
+<?php require  'includes/config.php';$qs = "SELECT * FROM musictable order by RAND() LIMIT 1";$query = mysqli_query($con,$qs);while ($res = mysqli_fetch_array($query)){echo $res['musictitle'];}?>

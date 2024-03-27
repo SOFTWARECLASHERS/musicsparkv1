@@ -1,0 +1,26 @@
+ErrorDocument 404 /music/error
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteBase /music
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+RewriteCond %{THE_REQUEST} "^[^ ]* .*?\.php[? ].*$"
+RewriteRule .* - [L,R=404]
+
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+DirectoryIndex index.php
+
+#TO UPLOAD LARGER FILES
+php_value upload_max_filesize 50M
+php_value post_max_filesize 50M
+php_value max_input_time 1000
+php_value max_execution_time 1000
