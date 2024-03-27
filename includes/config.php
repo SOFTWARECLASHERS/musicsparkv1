@@ -3,10 +3,10 @@
 
 session_start();
 // define constant variables
-define('DB_NAME', 'epiz_28503743_musicshop');
-define('DB_USER', 'epiz_28503743');
-define('DB_PASSWORD', 'V8mQQAuC');
-define('DB_HOST', 'sql307.epizy.com');
+define('DB_NAME', 'db name');
+define('DB_USER', 'db user');
+define('DB_PASSWORD', 'db password');
+define('DB_HOST', 'db host');
 try{
 
     // connection variable
