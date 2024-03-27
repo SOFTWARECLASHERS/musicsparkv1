@@ -2,10 +2,10 @@
 class DBcon
 {
 	// database connection properties
-	protected $host = 'sql307.epizy.com';
-	protected $user = 'epiz_28503743';
-	protected $password = 'V8mQQAuC';
-	protected $dbname = "epiz_28503743_musicshop";
+	protected $host = 'your databse host;
+	protected $user = 'your databse username';
+	protected $password = 'your database password';
+	protected $dbname = "your database name"; 
     public $con = null;
 
 	public function __construct()
